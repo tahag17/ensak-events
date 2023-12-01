@@ -5,7 +5,7 @@
                 <?php 
                 require_once 'utils/functions.php';
                 echo '<a href = "index.php" class = "navbar-brand">
-                    Event Management Systems
+                    ENSAK EVENTS
                 </a> ';
                 ?>
             </div>
@@ -14,18 +14,14 @@
                 //links to database contents. *if logged in
                 if(is_logged_in()){
                     require_once 'utils/functions.php';
-                    echo '<li><a href = "index.php">Home</a></li>';
                     echo '<li><a href = "viewEvents.php">Events</a></li>';
                     echo '<li><a href = "viewLocations.php">Locations</a></li>';
-                    echo '<li><a href = "contact.php">Contact Us</a></li>';
                     echo '<li class="btnlogout"><a class = "btn btn-default navbar-btn" href = "logout.php">Logout <span class = "glyphicon glyphicon-log-out"></span></a></li>';
                 }  
                 //links non database contents. *if logged out
                 else {
-                    echo '<li><a href = "index.php">Home</a></li>';
                     echo '<li><a href = "events2.php">Events</a></li>';
                     echo '<li><a href = "locations2.php">Locations</a></li>';
-                    echo '<li><a href = "contact.php">Contact Us</a></li>';
                     echo '<button type = "button" class = "btn btn-default navbar-btn" data-toggle = "modal" data-target = "#login">Login <Span class="glyphicon glyphicon-log-in"></span></button>';
                 }
                 ?>
@@ -78,17 +74,10 @@
             </ul>
         </div><!--container div-->
     </nav>
-    <div class = "col-md-12">
-        <div class = "container">
-            <div class = "jumbotron"><!--jumbotron-->
-                <h1>Urban Events Venues & Catering</h1><!--jumbotron heading-->
-                <p><!--jumbotron content-->
-                Whether you're looking to book a cocktail party, post-work gathering, celebratory function, conference, business
-                meeting, wedding or private dining event, our dedicated Urban Events team can create a package that will meet
-                your every need.
-                </p>
-                <p id="dateAndTime"></p>
-            </div>
+    <div class="col-md-12 header-content">
+        <div class="container text-center">
+            <h1>All Ensak Events</h1><!--jumbotron heading-->
+            <p id="dateAndTime"></p>
         </div>
     </div>
 </header>
