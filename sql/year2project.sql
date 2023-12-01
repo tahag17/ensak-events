@@ -74,21 +74,21 @@ INSERT INTO `locations` (`LocationID`, `Name`, `Address`, `ManagerFName`, `Manag
 --
 
 CREATE TABLE `users` (
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `role` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `role` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`username`, `password`, `role`) VALUES
-('test', '1234', 'user');
-
---
--- Indexes for dumped tables
---
+('joe@bloggs.com', 'secret', 'admin'),
+('mary@bloggs.com', 'secret', 'staff'),
+('fred@bloggs.com', 'secret', 'user');
 
 --
 -- Indexes for table `events`
